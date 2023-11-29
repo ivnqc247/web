@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELLPARTS - Tienda de Repuestos de Pantallas</title>
+    <!-- Enlace a hojas de estilo y fuentes (si es necesario) -->
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Encabezado y barra de navegación */
+        header {
+            background-color: #82afdf;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            border: 2px solid #b1cdeb;
+            border-radius: 20px;
+            padding: 10px;
+            width: 60%;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-bar button {
+            background-color: #719cca;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Navegación principal */
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #173b63;
+            margin: 0;
+        }
+
+        .main-nav ul li {
+            margin: 0 20px;
+        }
+
+        .main-nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .main-nav ul li a:hover {
+            background-color: #98c4f3;
+        }
+
+        /* Banner promocional */
+        .promo-banner {
+            background-color: #ffc107;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Contenido de la página */
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+        }
+
+        /* Lista de productos */
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .product-item img {
+            border-radius: 5px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Carrito de compras */
+        .cart {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+
+        /* Precios */
+        .price {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="cell-parts.png" alt="Logo de CELL-PARTS">
+        </div>
+        <!-- Formulario de búsqueda que realiza una acción en una página de búsqueda -->
+        <form class="search-bar" action="/buscar" method="get">
+            <input type="text" name="q" placeholder="Buscar repuesto..." required>
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <!-- Resto del contenido de tu página... -->
+
+    <!-- Scripts para funcionalidades adicionales -->
+    <script>
+        // Añade aquí scripts si son necesarios
+    </script>
+</body>
+</html>
+
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#samsung">Samsung</a></li>
+            <li><a href="#huawei">Huawei</a></li>
+            <li><a href="#xiaomi">Xiaomi</a></li>
+            <li><a href="#tecno">Tecno</a></li>
+            <li><a href="#realme">Realme</a></li>
+            <!-- Otros enlaces según sea necesario -->
+        </ul>
+    </nav>
+    <!-- Banner promocional -->
+    <div style="background-color: #ffc107; text-align: center; padding: 10px;">
+        <p>¡Ofertas especiales esta semana! Descuentos en repuestos seleccionados.</p>
+    </div>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Repuestos Samsung</title>
+        <style>
+            /* Estilos para el cuerpo de la página con la imagen de fondo */
+            body {
+                background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fnews.samsung.com%2Fmx%2Fsamsung-electronics-obtiene-el-6-lugar-en-el-ranking-best-global-brands-2018-de-interbrand&psig=AOvVaw16fDEP5-9gUyi6VpMVelV_&ust=1700706380141000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIDtmY_H1oIDFQAAAAAdAAAAABAI'); /* Ruta de la imagen de fondo */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+    
+            /* Estilos para el contenido de la página */
+            .container {
+                background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenido */
+                padding: 20px;
+            }
+    
+            /* Estilos para la lista de productos */
+            .product-list {
+                display: flex; /* Usar Flexbox para alinear elementos en una fila */
+                flex-wrap: wrap; /* Permitir que los elementos se envuelvan a la siguiente línea si no caben en el ancho de la pantalla */
+            }
+    
+            .product-item {
+                flex: 0 0 calc(33.33% - 20px); /* Establecer el ancho deseado para cada producto y agregar un margen entre ellos */
+                margin: 10px; /* Espacio entre los productos */
+                border: 1px solid #ddd; /* Agregar un borde a los productos */
+                padding: 10px; /* Espacio interno para los detalles del producto */
+            }
+    
+            /* Estilos para el carrito de compras */
+            .cart {
+                background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el carrito */
+                padding: 10px;
+                margin-top: 20px;
+                border: 1px solid #ddd;
+            }
+    
+            /* Estilos para los precios */
+            .price {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <style>
+        /* Estilos Generales */
+        body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          background: #f5f5f5;
+        }
+      
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+          background: #fff;
+        }
+      
+        /* Estilos de la Lista de Productos */
+        .product-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: -10px;
+        }
+      
+        /* Estilos de los Items de Productos */
+        .product-item {
+          background: #ffffff;
+          border: 1px solid #e1e1e1;
+          margin: 10px;
+          padding: 20px;
+          flex: 0 1 calc(20% - 20px); /* Ajusta el ancho de los elementos para que sean 5 por fila, restando el margin */
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease-in-out;
+        }
+      
+        .product-item:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+      
+        /* Estilos de las Imágenes de Productos */
+        .product-item img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin-bottom: 15px;
+        }
+      
+        /* Estilos para el Precio */
+        .price {
+          font-size: 1.2em;
+          color: #38a869;
+          font-weight: bold;
+        }
+      
+        .old-price {
+          font-size: 0.9em;
+          text-decoration: line-through;
+          color: #d9534f;
+        }
+      
+        /* Estilos para la Disponibilidad */
+        .availability {
+          margin-top: 5px;
+          font-size: 0.9em;
+          color: #d9534f;
+        }
+      
+        /* Estilos para el Botón de Compra */
+        .cart {
+          text-align: center;
+          margin-top: 15px;
+        }
+      
+        .cart button {
+          background-color: #38a869;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+      
+        .cart button:hover {
+          background-color: #32a852;
+        }
+      
+        /* Estilos Responsivos para diferentes tamaños de pantalla */
+        @media (max-width: 1024px) {
+          .product-item {
+            flex: 0 1 calc(33.333% - 20px); /* 3 elementos por fila en pantallas medianas */
+          }
+        }
+      
+        @media (max-width: 768px) {
+          .product-item {
+            flex: 0 1 calc(50% - 20px); /* 2 elementos por fila en pantallas pequeñas */
+          }
+        }
+      
+        @media (max-width: 480px) {
+          .product-item {
+            flex: 0 1 calc(100% - 20px); /* 1 elemento por fila en pantallas muy pequeñas */
+          }
+        }
+      </style>
+      
+            
+
+            <!-- Sección Samsung -->
+            <section id="samsung">
+                <h2>Repuestos Samsung</h2>
+                <div class="product-list">
+                    <!-- Productos ficticios con precios en BOB -->
+                    <div class="product-item">
+                        <span class="save">Ahorra BOB 40</span>
+                        <img src="a10.jpeg" alt="Samsung A10">
+                        <h3>Samsung A10</h3>
+                        <p class="old-price">BOB 120.00</p>
+                        <p class="price">BOB 80.00</p>
+                        <div class="availability">Disponible</div>
+                        <button onclick="agregarAlCarrito('Samsung A10', 80)">Agregar al carrito</button>
+                    </div>
+                <!-- Productos ficticios con precios en BOB -->
+<div class="product-item">
+    <span class="save">Ahorra BOB 50</span>
+    <img src="a10s.jpeg" alt="Samsung A10S">
+    <h3>Samsung A10S</h3>
+    <p class="old-price">BOB 160.00</p>
+    <p class="price">BOB 110.00</p>
+    <div class="availability">Disponible</div>
+    <button onclick="agregarAlCarrito('Samsung A10S', 110)">Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 70</span>
+    <img src="a20.jpeg" alt="Samsung A20">
+    <h3>Samsung A20</h3>
+    <p class="old-price">BOB 230.00</p>
+    <p class="price">BOB 160.00</p>
+    <div class="availability">Agotado</div>
+    <button onclick="agregarAlCarrito('Samsung A20', 160)" disabled>Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 90</span>
+    <img src="a50.jpeg" alt="Samsung A50">
+    <h3>Samsung A50</h3>
+    <p class="old-price">BOB 280.00</p>
+    <p class="price">BOB 190.00</p>
+    <div class="availability">Disponible</div>
+    <button onclick="agregarAlCarrito('Samsung A50', 190)">Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 300</span>
+    <img src="note 10.jpeg" alt="Samsung Note 10">
+    <h3>Samsung Note 10</h3>
+    <p class="old-price">BOB 1500.00</p>
+    <p class="price">BOB 1200.00</p>
+    <div class="availability">Últimas unidades</div>
+    <button onclick="agregarAlCarrito('Samsung Note 10', 1200)">Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 250</span>
+    <img src="s10.jpeg" alt="Samsung S10">
+    <h3>Samsung S10</h3>
+    <p class="old-price">BOB 1300.00</p>
+    <p class="price">BOB 1550.00</p>
+    <div class="availability">Disponible</div>
+    <button onclick="agregarAlCarrito('Samsung S10', 1550)">Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 300</span>
+    <img src="note 10.jpeg" alt="Samsung Note 10">
+    <h3>Samsung Note 10</h3>
+    <p class="old-price">BOB 1500.00</p>
+    <p class="price">BOB 1200.00</p>
+    <div class="availability">Últimas unidades</div>
+    <button onclick="agregarAlCarrito('Samsung Note 10', 1200)">Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 250</span>
+    <img src="s10.jpeg" alt="Samsung S10">
+    <h3>Samsung S10</h3>
+    <p class="old-price">BOB 1300.00</p>
+    <p class="price">BOB 1550.00</p>
+    <div class="availability">Disponible</div>
+    <button onclick="agregarAlCarrito('Samsung S10', 1550)">Agregar al carrito</button>
+  </div>
+  
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Tienda en línea</title>
+      <style>
+          .cart-container {
+              position: fixed;
+              top: 10px;
+              right: 10px;
+              z-index: 1000;
+          }
+  
+          .cart {
+              display: none; /* Inicialmente oculto */
+              background-color: #f8f8f8; /* Color claro para el fondo */
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+              padding: 10px;
+              width: 300px;
+              border-radius: 10px; /* Bordes redondeados */
+          }
+  
+          #cart-btn {
+              background-color: #4CAF50; /* Verde: color asociado con "Ir a la compra" */
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px; /* Bordes redondeados */
+              cursor: pointer;
+              font-size: 16px;
+          }
+  
+          #cart-btn:hover {
+              background-color: #45a049;
+          }
+  
+          .item-button {
+              background-color: #008CBA; /* Azul: inspira confianza y seguridad */
+              color: white;
+              border: none;
+              cursor: pointer;
+              padding: 5px 10px;
+              margin: 2px;
+              border-radius: 5px; /* Bordes redondeados */
+          }
+  
+          .item-button:hover {
+              background-color: #007B9E;
+          }
+  
+          .realizar-pedido {
+              background-color: #f44336; /* Rojo: llama a la acción */
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px; /* Bordes redondeados */
+              cursor: pointer;
+              margin-top: 10px;
+          }
+  
+          .realizar-pedido:hover {
+              background-color: #e31b0c;
+          }
+  
+          .cart-item {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 5px;
+          }
+  
+          .cart-item-details {
+              flex-grow: 1;
+              margin-left: 10px;
+          }
+      </style>
+  </head>
+  <body>
+  
+  <!-- Resto de tu contenido HTML -->
+  
+  <div class="cart-container">
+      <button id="cart-btn">Ver Carrito</button>
+      <div class="cart" id="cart">
+          <h2>Carrito de compras</h2>
+          <ul id="carrito-lista">
+              <!-- Los productos seleccionados se agregarán aquí -->
+          </ul>
+          <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+          <button class="realizar-pedido">Realizar Pedido</button>
+      </div>
+  </div>
+  
+  <script>
+      let carrio = [];
+      let tota = 0;
+  
+      document.getElementById("cart-btn").addEventListener("click", function() {
+          let cart = document.getElementById("cart");
+          cart.style.display = cart.style.display === "block" ? "none" : "block";
+      });
+  
+      function agregarAlCarrito(producto, precio) {
+          let productoEncontrado = carrito.find(item => item.producto === producto);
+          if (productoEncontrado) {
+              productoEncontrado.cantidad++;
+          } else {
+              carrito.push({ producto, precio, cantidad: 1 });
+          }
+          total += precio;
+          actualizarCarrito();
+      }
+  
+      function actualizarCarrito() {
+          const carritoLista = document.getElementById("carrito-lista");
+          const carritoTotal = document.getElementById("carrito-total");
+  
+          carritoLista.innerHTML = "";
+  
+          carrito.forEach((item, index) => {
+              const div = document.createElement("div");
+              div.className = "cart-item";
+  
+              const detalles = document.createElement("span");
+              detalles.className = "cart-item-details";
+              detalles.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)} x ${item.cantidad}`;
+              div.appendChild(detalles);
+  
+              const menosButton = document.createElement("button");
+              menosButton.textContent = "-";
+              menosButton.className = "item-button";
+              menosButton.onclick = () => modificarCantidad(index, -1);
+              div.appendChild(menosButton);
+  
+              const masButton = document.createElement("button");
+              masButton.textContent = "+";
+              masButton.className = "item-button";
+              masButton.onclick = () => modificarCantidad(index, 1);
+              div.appendChild(masButton);
+  
+              const li = document.createElement("li");
+              li.appendChild(div);
+              carritoLista.appendChild(li);
+          });
+  
+          carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+      }
+  
+      function modificarCantidad(index, cambio) {
+          const producto = carrito[index];
+          if (!producto) return;
+  
+          producto.cantidad += cambio;
+          total += producto.precio * cambio;
+  
+          if (producto.cantidad <= 0) {
+              carrito.splice(index, 1);
+          }
+  
+          actualizarCarrito();
+      }
+  </script>
+  </body>
+  </html>
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Tienda en línea</title>
+    <!-- Estilos existentes -->
+    <style>
+        /* Tus estilos existentes */
+
+        /* Estilos para el modal de pago */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            border-radius: 5px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .form-pago {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-pago input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-pago button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-pago button:hover {
+            background-color: #45a049;
+        }
+
+        .form-pago label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Resto de tu contenido HTML -->
+
+<div class="cart-container">
+    <!-- Tu contenido existente del carrito -->
+</div>
+
+<!-- Modal de Pago -->
+<div id="modalPago" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Formulario de Pago</h2>
+        <form class="form-pago">
+            <label for="nombreTarjeta">Nombre en la Tarjeta</label>
+            <input type="text" id="nombreTarjeta" placeholder="Nombre completo">
+
+            <label for="numeroTarjeta">Número de Tarjeta</label>
+            <input type="text" id="numeroTarjeta" placeholder="1111-2222-3333-4444">
+
+            <label for="fechaExpiracion">Fecha de Expiración</label>
+            <input type="text" id="fechaExpiracion" placeholder="MM/AA">
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="CVV">
+
+            <button type="submit">Pagar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Tu JavaScript existente
+
+    // JavaScript para el modal de pago
+    var modal = document.getElementById("modalPago");
+    var btn = document.querySelector(".realizar-pedido");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
+
+            
+    
+   <!-- Sección Huawei -->
+<section id="huawei">
+    <h2>Repuestos Huawei</h2>
+    <div class="product-list">
+        <!-- Producto: Huawei P10 Lite -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 20</span>
+            <img src="p10lite.jpeg" alt="Huawei P10 Lite">
+            <h3>Huawei P10 Lite</h3>
+            <p class="old-price">BOB 130.00</p>
+            <p class="price">BOB 110.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Huawei P10 Lite', 110)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Huawei P20 Pro -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 60</span>
+            <img src="p20pro.jpeg" alt="Huawei P20 Pro">
+            <h3>Huawei P20 Pro</h3>
+            <p class="old-price">BOB 200.00</p>
+            <p class="price">BOB 140.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Huawei P20 Pro', 140)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Huawei P30 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 70</span>
+            <img src="p30.jpeg" alt="Huawei P30">
+            <h3>Huawei P30</h3>
+            <p class="old-price">BOB 270.00</p>
+            <p class="price">BOB 200.00</p>
+            <div class="availability">Últimas unidades</div>
+            <button onclick="agregarAlCarrito('Huawei P30', 200)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Huawei Mate 20 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 150</span>
+            <img src="mate 20.jpeg" alt="Huawei Mate 20">
+            <h3>Huawei Mate 20</h3>
+            <p class="old-price">BOB 2500.00</p>
+            <p class="price">BOB 2350.00</p>
+            <div class="availability">Agotado</div>
+            <button disabled onclick="agregarAlCarrito('Huawei Mate 20', 2350)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Huawei Y9 Prime -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 100</span>
+            <img src="y9prime.jpeg" alt="Huawei Y9 Prime">
+            <h3>Huawei Y9 Prime</h3>
+            <p class="old-price">BOB 1400.00</p>
+            <p class="price">BOB 1300.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Huawei Y9 Prime', 1300)">Agregar al carrito</button>
+        </div>
+                <!-- Producto: Huawei P20 Pro -->
+                <div class="product-item">
+                    <span class="save">Ahorra BOB 60</span>
+                    <img src="p20pro.jpeg" alt="Huawei P20 Pro">
+                    <h3>Huawei P20 Pro</h3>
+                    <p class="old-price">BOB 200.00</p>
+                    <p class="price">BOB 140.00</p>
+                    <div class="availability">Disponible</div>
+                    <button onclick="agregarAlCarrito('Huawei P20 Pro', 140)">Agregar al carrito</button>
+                </div>
+                <!-- Producto: Huawei P30 -->
+                <div class="product-item">
+                    <span class="save">Ahorra BOB 70</span>
+                    <img src="p30.jpeg" alt="Huawei P30">
+                    <h3>Huawei P30</h3>
+                    <p class="old-price">BOB 270.00</p>
+                    <p class="price">BOB 200.00</p>
+                    <div class="availability">Últimas unidades</div>
+                    <button onclick="agregarAlCarrito('Huawei P30', 200)">Agregar al carrito</button>
+                </div>
+                <!-- Producto: Huawei Mate 20 -->
+                <div class="product-item">
+                    <span class="save">Ahorra BOB 150</span>
+                    <img src="mate 20.jpeg" alt="Huawei Mate 20">
+                    <h3>Huawei Mate 20</h3>
+                    <p class="old-price">BOB 2500.00</p>
+                    <p class="price">BOB 2350.00</p>
+                    <div class="availability">Agotado</div>
+                    <button disabled onclick="agregarAlCarrito('Huawei Mate 20', 2350)">Agregar al carrito</button>
+                </div>
+    </div>
+</section>
+
+
+</div>
+</section>
+
+<!-- Carrito de compras -->
+<div class="cart">
+    <h2>Carrito de compras</h2>
+    <ul id="carrito-lista">
+        <!-- Los productos seleccionados se agregarán aquí -->
+    </ul>
+    <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+</div>
+
+<script>
+    // JavaScript para manejar el carrito de compras
+    let = [];
+    let  = 0;
+
+    function agregarAlCarrito(producto, precio) {
+        carrito.push({ producto, precio });
+        total += precio;
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const carritoLista = document.getElementById("carrito-lista");
+        const carritoTotal = document.getElementById("carrito-total");
+
+        // Limpiar la lista del carrito
+        carritoLista.innerHTML = "";
+
+        // Agregar elementos al carrito
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+            carritoLista.appendChild(li);
+        });
+
+        // Actualizar el total
+        carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
+
+
+
+ <!-- Sección Xiaomi -->
+<section id="xiaomi">
+    <h2>Repuestos Xiaomi</h2>
+    <div class="product-list">
+        <!-- Producto: Xiaomi Redmi Note 10 Pro -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 13</span>
+            <img src="note 10 pro.jpeg" alt="Xiaomi Redmi Note 10 Pro">
+            <h3>Redmi Note 10 Pro</h3>
+            <p class="old-price">BOB 210.00</p>
+            <p class="price">BOB 197.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Xiaomi Redmi Note 10 Pro', 197)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Xiaomi Redmi 10C -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 7</span>
+            <img src="c10.jpeg" alt="Xiaomi Redmi 10C">
+            <h3>Redmi 10C</h3>
+            <p class="old-price">BOB 115.00</p>
+            <p class="price">BOB 107.00</p>
+            <div class="availability">Últimas unidades</div>
+            <button onclick="agregarAlCarrito('Xiaomi Redmi 10C', 107)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Xiaomi Mi 11 Lite -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 10</span>
+            <img src="mi11lite.jpeg" alt="Xiaomi Mi 11 Lite">
+            <h3>Mi 11 Lite</h3>
+            <p class="old-price">BOB 190.00</p>
+            <p class="price">BOB 180.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Xiaomi Mi 11 Lite', 180)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Xiaomi Poco X3 Pro -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 16</span>
+            <img src="x3 pro.jpeg" alt="Xiaomi Poco X3 Pro">
+            <h3>Poco X3 Pro</h3>
+            <p class="old-price">BOB 220.00</p>
+            <p class="price">BOB 204.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Xiaomi Poco X3 Pro', 204)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Xiaomi Mi Band 6 -->
+    </div>
+</section>
+
+
+</div>
+</section>
+
+<!-- Carrito de compras -->
+<div class="cart">
+    <h2>Carrito de compras</h2>
+    <ul id="carrito-lista">
+        <!-- Los productos seleccionados se agregarán aquí -->
+    </ul>
+    <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+</div>
+
+<script>
+    // JavaScript para manejar el carrito de compras
+    // let  = [];
+    let  = 0;
+
+    function agregarAlCarrito(producto, precio) {
+        carrito.push({ producto, precio });
+        total += precio;
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const carritoLista = document.getElementById("carrito-lista");
+        const carritoTotal = document.getElementById("carrito-total");
+
+        // Limpiar la lista del carrito
+        carritoLista.innerHTML = "";
+
+        // Agregar elementos al carrito
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+            carritoLista.appendChild(li);
+        });
+
+        // Actualizar el total
+        carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
+
+
+
+   <!-- Sección Tecno -->
+<section id="tecno">
+    <h2>Repuestos Tecno</h2>
+    <div class="product-list">
+        <!-- Producto: Tecno Camon 18P -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 9</span>
+            <img src="p18.jpeg" alt="Tecno Camon 18P">
+            <h3>Camon 18P</h3>
+            <p class="old-price">BOB 140.00</p>
+            <p class="price">BOB 131.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Tecno Camon 18P', 131)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Tecno Spark 7 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 50</span>
+            <img src="spark 7.jpeg" alt="Tecno Spark 7">
+            <h3>Spark 7</h3>
+            <p class="old-price">BOB 900.00</p>
+            <p class="price">BOB 850.00</p>
+            <div class="availability">Últimas unidades</div>
+            <button onclick="agregarAlCarrito('Tecno Spark 7', 850)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Tecno Phantom X -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 120</span>
+            <img src="tecno x.jpeg" alt="Tecno Phantom X">
+            <h3>Phantom X</h3>
+            <p class="old-price">BOB 2000.00</p>
+            <p class="price">BOB 1880.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Tecno Phantom X', 1880)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Tecno Pop 5 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 30</span>
+            <img src="pop 5.jpeg" alt="Tecno Pop 5">
+            <h3>Pop 5</h3>
+            <p class="old-price">BOB 700.00</p>
+            <p class="price">BOB 670.00</p>
+            <div class="availability">Agotado</div>
+            <button disabled onclick="agregarAlCarrito('Tecno Pop 5', 670)">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+
+</div>
+</section>
+
+<!-- Carrito de compras -->
+<div class="cart">
+    <h2>Carrito de compras</h2>
+    <ul id="carrito-lista">
+        <!-- Los productos seleccionados se agregarán aquí -->
+    </ul>
+    <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+</div>
+
+<script>
+    // JavaScript para manejar el carrito de compras
+  
+
+    function agregarAlCarrito(producto, precio) {
+        carrito.push({ producto, precio });
+        total += precio;
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const carritoLista = document.getElementById("carrito-lista");
+        const carritoTotal = document.getElementById("carrito-total");
+
+        // Limpiar la lista del carrito
+        carritoLista.innerHTML = "";
+
+        // Agregar elementos al carrito
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+            carritoLista.appendChild(li);
+        });
+
+        // Actualizar el total
+        carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
+
+
+
+    <!-- Sección Realme -->
+<section id="realme">
+    <h2>Repuestos Realme</h2>
+    <div class="product-list">
+        <!-- Producto: Realme C11 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 45</span>
+            <img src="c11.jpeg" alt="Realme C11">
+            <h3>Realme C11</h3>
+            <p class="old-price">BOB 750.00</p>
+            <p class="price">BOB 705.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Realme C11', 705)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Realme C21y -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 50</span>
+            <img src="c21y.jpeg" alt="Realme C21y">
+            <h3>Realme C21y</h3>
+            <p class="old-price">BOB 800.00</p>
+            <p class="price">BOB 750.00</p>
+            <div class="availability">Últimas unidades</div>
+            <button onclick="agregarAlCarrito('Realme C21y', 750)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Realme 8 Pro -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 120</span>
+            <img src="pro8.jpeg" alt="Realme 8 Pro">
+            <h3>Realme 8 Pro</h3>
+            <p class="old-price">BOB 2000.00</p>
+            <p class="price">BOB 1880.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Realme 8 Pro', 1880)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Realme GT -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 150</span>
+            <img src="gt5.jpeg" alt="Realme GT">
+            <h3>Realme GT</h3>
+            <p class="old-price">BOB 2500.00</p>
+            <p class="price">BOB 2350.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Realme GT', 2350)">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+        
+        <!-- Carrito de compras -->
+        <div class="cart">
+            <h2>Carrito de compras</h2>
+            <ul id="carrito-lista">
+                <!-- Los productos seleccionados se agregarán aquí -->
+            </ul>
+            <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+        </div>
+        
+        <script>
+            // JavaScript para manejar el carrito de compras
+            let carrito = [];
+            let total = 0;
+        
+            function agregarAlCarrito(producto, precio) {
+                carrito.push({ producto, precio });
+                total += precio;
+                actualizarCarrito();
+            }
+        
+            function actualizarCarrito() {
+                const carritoLista = document.getElementById("carrito-lista");
+                const carritoTotal = document.getElementById("carrito-total");
+        
+                // Limpiar la lista del carrito
+                carritoLista.innerHTML = "";
+        
+                // Agregar elementos al carrito
+                carrito.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+                    carritoLista.appendChild(li);
+                });
+        
+                // Actualizar el total
+                carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+            }
+        </script>
+        </body>
+        </html>
+        
+
+
+            </div>
+            <!DOCTYPE html>
+            <html lang="es">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Comentarios de Clientes</title>
+            <style>
+              .comments-section {
+                background-color: #f0f0f0;
+                padding: 20px;
+                text-align: center;
+              }
+              .comments-section h2 {
+                margin-bottom: 20px;
+              }
+              .comment {
+                background-color: #ffffff;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                position: relative;
+                display: inline-block;
+              }
+              .comment:before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 20px solid #ffffff;
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+              .comment-rating {
+                color: #FFD700;
+                font-size: 1.5em;
+              }
+              .comment-photo {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 3px solid white;
+                position: absolute;
+                bottom: -25px;
+                left: calc(50% - 25px);
+              }
+              .comment-author {
+                font-weight: bold;
+                margin-top: 10px;
+              }
+            </style>
+            </head>
+            <body>
+            
+            <section class="comments-section">
+              <h2>Comentarios de Nuestros Clientes</h2>
+            
+              <div class="comment">
+                <div class="comment-rating">★★★★★</div>
+                <p>"El mejor servicio que he recibido. ¡Atención de primera!"</p>
+                <img class="comment-photo" src="lolo.png" alt="Foto del cliente Roberto Álvarez">
+                <div class="comment-author">Roberto Álvarez</div>
+              </div>
+              
+            
+              <div class="comment">
+                <div class="comment-rating">★★★★☆</div>
+                <p>"Muy buenos resultados, aunque el tiempo de espera fue un poco largo."</p>
+                <img class="comment-photo" src="comentario  (5).png" alt="Foto de cliente 2">
+                <div class="comment-author">Carmen Ortiz</div>
+              </div>
+            
+              <div class="comment">
+                <div class="comment-rating">★★★★★</div>
+                <p>"Increíble calidad en el producto final. ¡Totalmente recomendado!"</p>
+                <img class="comment-photo" src="comentario  (4).png" alt="Foto de cliente 3">
+                <div class="comment-author">Luisa Fernández</div>
+              </div>
+            
+              <div class="comment">
+                <div class="comment-rating">★★★☆☆</div>
+                <p>"Buen servicio, pero podría mejorar en comunicación con el cliente."</p>
+                <img class="comment-photo" src="comentario  (3).png" alt="Foto de cliente 4">
+                <div class="comment-author">Jorge Martín</div>
+              </div>
+              <div class="comment">
+                <div class="comment-rating">★★★★★</div>
+                <p>"Experiencia excepcional, atención personalizada y resultados perfectos."</p>
+                <img class="comment-photo" src="comentario  (2).png" alt="Foto de cliente 5">
+                <div class="comment-author">Ana Gómez</div>
+              </div>
+              
+              <!DOCTYPE html>
+              <html lang="es">
+              <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Contacto</title>
+              <style>
+                #contact-form {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                }
+              
+                #contact-form input, #contact-form textarea {
+                  padding: 10px;
+                  margin-bottom: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                }
+              
+                #contact-form button {
+                  padding: 10px 20px;
+                  background-color: green;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                }
+              
+                #notification {
+                  display: none;
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: rgb(13, 158, 13);
+                  color: white;
+                  padding: 10px;
+                  border-radius: 5px;
+                  z-index: 1001;
+                  transition: all 0.5s;
+                }
+              
+                @keyframes wink {
+                  0%, 100% { transform: scale(1); }
+                  50% { transform: scale(0.5); }
+                }
+              
+                .emoji {
+                  animation: wink 3s ease-in-out infinite;
+                }
+              </style>
+              </head>
+              <body>
+              
+              <!-- Sección de Contacto -->
+              <section id="contacto">
+                <h2>Contacto</h2>
+                <p>Si tienes preguntas o necesitas más información, no dudes en contactarnos.</p>
+                <form id="contact-form" onsubmit="event.preventDefault(); enviarMensaje();">
+                  <input type="text" id="name" name="name" placeholder="Nombre:" required>
+                  <input type="email" id="email" name="email" placeholder="Correo Electrónico:" required>
+                  <textarea id="message" name="message" placeholder="Mensaje:" required></textarea>
+                  <button type="submit">Enviar Mensaje</button>
+                </form>
+                <div id="notification">
+                  <span>Mensaje enviado </span><span class="emoji">😉</span>
+                </div>
+              </section>
+              
+              <!-- Botón de Chat Flotante -->
+              <a href="https://wa.me/message/543Z3XDHSEM3O1" id="chat-button" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background-color: blue; color: white; border: none; border-radius: 50px; cursor: pointer; text-decoration: none;">Chat</a>
+              
+              <script>
+                function enviarMensaje() {
+                  // Aquí iría el código para enviar el mensaje, como una petición AJAX o algo similar
+              
+                  // Muestra la notificación
+                  var notification = document.getElementById('notification');
+                  notification.style.display = 'block';
+              
+                  // Después de 3 segundos, oculta la notificación
+                  setTimeout(function() {
+                    notification.style.display = 'none';
+                  }, 3000);
+                }
+              </script>
+              
+              </body>
+              </html>
+              
+              

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELLPARTS - Tienda de Repuestos de Pantallas</title>
+    <!-- Enlace a hojas de estilo y fuentes (si es necesario) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #412727;
+        }
+
+        .logo-container img {
+            animation: logoSpin 3s ease-in-out infinite;
+        }
+
+        @keyframes logoSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .search-bar input, .search-bar button {
+            border-radius: 20px;
+            border: 2px solid #007bff;
+        }
+
+        .search-bar button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-nav ul li {
+            margin: 0 10px;
+        }
+
+        .main-nav ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .main-nav ul li a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .product-item {
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .product-item img {
+            border-radius: 5px;
+        }
+
+        section:nth-child(even) {
+            background-color: #e9ecef;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        button, .footer a {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover, .footer a:hover {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        h2 {
+            position: relative;
+            color: #007bff;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 3px;
+            width: 100%;
+            background-color: #007bff;
+            transform: scaleX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        h2:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- Espacio para el logo de CELLPARTS -->
+            <img src="logo.png" alt="Logo de CELLPARTS">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar repuesto...">
+            <button>Buscar</button>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#samsung">Samsung</a></li>
+            <li><a href="#huawei">Huawei</a></li>
+            <li><a href="#xiaomi">Xiaomi</a></li>
+            <li><a href="#tecno">Tecno</a></li>
+            <li><a href="#realme">Realme</a></li>
+            <!-- Otros enlaces según sea necesario -->
+        </ul>
+    </nav>
+    <!-- Banner promocional -->
+    <div style="background-color: #ffc107; text-align: center; padding: 10px;">
+        <p>¡Ofertas especiales esta semana! Descuentos en repuestos seleccionados.</p>
+    </div>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Repuestos Samsung</title>
+        <style>
+            /* Estilos para el cuerpo de la página con la imagen de fondo */
+            body {
+                background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fnews.samsung.com%2Fmx%2Fsamsung-electronics-obtiene-el-6-lugar-en-el-ranking-best-global-brands-2018-de-interbrand&psig=AOvVaw16fDEP5-9gUyi6VpMVelV_&ust=1700706380141000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIDtmY_H1oIDFQAAAAAdAAAAABAI'); /* Ruta de la imagen de fondo */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+    
+            /* Estilos para el contenido de la página */
+            .container {
+                background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenido */
+                padding: 20px;
+            }
+    
+            /* Estilos para la lista de productos */
+            .product-list {
+                display: flex; /* Usar Flexbox para alinear elementos en una fila */
+                flex-wrap: wrap; /* Permitir que los elementos se envuelvan a la siguiente línea si no caben en el ancho de la pantalla */
+            }
+    
+            .product-item {
+                flex: 0 0 calc(33.33% - 20px); /* Establecer el ancho deseado para cada producto y agregar un margen entre ellos */
+                margin: 10px; /* Espacio entre los productos */
+                border: 1px solid #ddd; /* Agregar un borde a los productos */
+                padding: 10px; /* Espacio interno para los detalles del producto */
+            }
+    
+            /* Estilos para el carrito de compras */
+            .cart {
+                background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el carrito */
+                padding: 10px;
+                margin-top: 20px;
+                border: 1px solid #ddd;
+            }
+    
+            /* Estilos para los precios */
+            .price {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!DOCTYPE html>
+            <html lang="es">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Tienda de Repuestos</title>
+            <style>
+              #samsung {
+                text-align: center;
+              }
+              .product-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+              }
+              .product-item {
+                border: 1px solid #ddd;
+                padding: 10px;
+                width: 200px;
+                margin-bottom: 15px;
+                position: relative;
+              }
+              .product-item img {
+                width: 100%;
+                height: auto;
+              }
+              .price {
+                color: green;
+                font-weight: bold;
+              }
+              .old-price {
+                text-decoration: line-through;
+                color: red;
+              }
+              .availability {
+                color: red;
+                font-weight: bold;
+              }
+              .save {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background-color: red;
+                color: white;
+                padding: 2px 5px;
+                font-size: 0.8em;
+              }
+              .cart {
+                border-top: 1px solid #ddd;
+                padding-top: 10px;
+                margin-top: 10px;
+              }
+            </style>
+            </head>
+            <body>
+            
+            <!-- Sección Samsung -->
+            <section id="samsung">
+                <h2>Repuestos Samsung</h2>
+                <div class="product-list">
+                    <!-- Productos ficticios con precios en BOB -->
+                    <div class="product-item">
+                        <span class="save">Ahorra BOB 50</span>
+                        <img src="samsung-a10.png" alt="Samsung A10">
+                        <h3>Samsung A10</h3>
+                        <p class="old-price">BOB 850.00</p>
+                        <p class="price">BOB 800.00</p>
+                        <div class="availability">Disponible</div>
+                        <button onclick="agregarAlCarrito('Samsung A10', 800)">Agregar al carrito</button>
+                    </div>
+                <!-- Productos ficticios con precios en BOB -->
+<div class="product-item">
+    <span class="save">Ahorra BOB 50</span>
+    <img src="samsung-a10.png" alt="Samsung A10">
+    <h3>Samsung A10</h3>
+    <p class="old-price">BOB 850.00</p>
+    <p class="price">BOB 800.00</p>
+    <div class="availability">Disponible</div>
+    <button onclick="agregarAlCarrito('Samsung A10', 800)">Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 70</span>
+    <img src="samsung-a20.png" alt="Samsung A20">
+    <h3>Samsung A20</h3>
+    <p class="old-price">BOB 950.00</p>
+    <p class="price">BOB 880.00</p>
+    <div class="availability">Agotado</div>
+    <button onclick="agregarAlCarrito('Samsung A20', 880)" disabled>Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 100</span>
+    <img src="samsung-a50.png" alt="Samsung A50">
+    <h3>Samsung A50</h3>
+    <p class="old-price">BOB 1200.00</p>
+    <p class="price">BOB 1100.00</p>
+    <div class="availability">Disponible</div>
+    <button onclick="agregarAlCarrito('Samsung A50', 1100)">Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 120</span>
+    <img src="samsung-note10.png" alt="Samsung Note 10">
+    <h3>Samsung Note 10</h3>
+    <p class="old-price">BOB 2200.00</p>
+    <p class="price">BOB 2080.00</p>
+    <div class="availability">Últimas unidades</div>
+    <button onclick="agregarAlCarrito('Samsung Note 10', 2080)">Agregar al carrito</button>
+  </div>
+  <div class="product-item">
+    <span class="save">Ahorra BOB 150</span>
+    <img src="samsung-s10.png" alt="Samsung S10">
+    <h3>Samsung S10</h3>
+    <p class="old-price">BOB 2500.00</p>
+    <p class="price">BOB 2350.00</p>
+    <div class="availability">Disponible</div>
+    <button onclick="agregarAlCarrito('Samsung S10', 2350)">Agregar al carrito</button>
+  </div>
+  
+                </div>
+            </section>
+            
+            <!-- Carrito de compras -->
+            <div class="cart">
+                <h2>Carrito de compras</h2>
+                <ul id="carrito-lista">
+                    <!-- Los productos seleccionados se agregarán aquí -->
+                </ul>
+                <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+            </div>
+            
+            <script>
+                // JavaScript para manejar el carrito de compras
+                let carrito = [];
+                let total = 0;
+            
+                function agregarAlCarrito(producto, precio) {
+                    carrito.push({ producto, precio });
+                    total += precio;
+                    actualizarCarrito();
+                }
+            
+                function actualizarCarrito() {
+                    const carritoLista = document.getElementById("carrito-lista");
+                    const carritoTotal = document.getElementById("carrito-total");
+            
+                    // Limpiar la lista del carrito
+                    carritoLista.innerHTML = "";
+            
+                    // Agregar elementos al carrito
+                    carrito.forEach(item => {
+                        const li = document.createElement("li");
+                        li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+                        carritoLista.appendChild(li);
+                    });
+            
+                    // Actualizar el total
+                    carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+                }
+            </script>
+            </body>
+            </html>
+            
+    
+   <!-- Sección Huawei -->
+<section id="huawei">
+    <h2>Repuestos Huawei</h2>
+    <div class="product-list">
+        <!-- Producto: Huawei P10 Lite -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 80</span>
+            <img src="huawei-p10-lite.png" alt="Huawei P10 Lite">
+            <h3>Huawei P10 Lite</h3>
+            <p class="old-price">BOB 700.00</p>
+            <p class="price">BOB 620.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Huawei P10 Lite', 620)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Huawei P20 Pro -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 120</span>
+            <img src="huawei-p20-pro.png" alt="Huawei P20 Pro">
+            <h3>Huawei P20 Pro</h3>
+            <p class="old-price">BOB 1500.00</p>
+            <p class="price">BOB 1380.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Huawei P20 Pro', 1380)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Huawei P30 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 90</span>
+            <img src="huawei-p30.png" alt="Huawei P30">
+            <h3>Huawei P30</h3>
+            <p class="old-price">BOB 800.00</p>
+            <p class="price">BOB 710.00</p>
+            <div class="availability">Últimas unidades</div>
+            <button onclick="agregarAlCarrito('Huawei P30', 710)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Huawei Mate 20 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 150</span>
+            <img src="huawei-mate20.png" alt="Huawei Mate 20">
+            <h3>Huawei Mate 20</h3>
+            <p class="old-price">BOB 2500.00</p>
+            <p class="price">BOB 2350.00</p>
+            <div class="availability">Agotado</div>
+            <button disabled onclick="agregarAlCarrito('Huawei Mate 20', 2350)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Huawei Y9 Prime -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 100</span>
+            <img src="huawei-y9-prime.png" alt="Huawei Y9 Prime">
+            <h3>Huawei Y9 Prime</h3>
+            <p class="old-price">BOB 1400.00</p>
+            <p class="price">BOB 1300.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Huawei Y9 Prime', 1300)">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+
+</div>
+</section>
+
+<!-- Carrito de compras -->
+<div class="cart">
+    <h2>Carrito de compras</h2>
+    <ul id="carrito-lista">
+        <!-- Los productos seleccionados se agregarán aquí -->
+    </ul>
+    <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+</div>
+
+<script>
+    // JavaScript para manejar el carrito de compras
+    let carrito = [];
+    let total = 0;
+
+    function agregarAlCarrito(producto, precio) {
+        carrito.push({ producto, precio });
+        total += precio;
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const carritoLista = document.getElementById("carrito-lista");
+        const carritoTotal = document.getElementById("carrito-total");
+
+        // Limpiar la lista del carrito
+        carritoLista.innerHTML = "";
+
+        // Agregar elementos al carrito
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+            carritoLista.appendChild(li);
+        });
+
+        // Actualizar el total
+        carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
+
+
+
+ <!-- Sección Xiaomi -->
+<section id="xiaomi">
+    <h2>Repuestos Xiaomi</h2>
+    <div class="product-list">
+        <!-- Producto: Xiaomi Redmi Note 10 Pro -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 130</span>
+            <img src="xiaomi-redmi-note-10-pro.png" alt="Xiaomi Redmi Note 10 Pro">
+            <h3>Redmi Note 10 Pro</h3>
+            <p class="old-price">BOB 2100.00</p>
+            <p class="price">BOB 1970.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Xiaomi Redmi Note 10 Pro', 1970)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Xiaomi Redmi 10C -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 75</span>
+            <img src="xiaomi-redmi-10c.png" alt="Xiaomi Redmi 10C">
+            <h3>Redmi 10C</h3>
+            <p class="old-price">BOB 1150.00</p>
+            <p class="price">BOB 1075.00</p>
+            <div class="availability">Últimas unidades</div>
+            <button onclick="agregarAlCarrito('Xiaomi Redmi 10C', 1075)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Xiaomi Mi 11 Lite -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 100</span>
+            <img src="xiaomi-mi-11-lite.png" alt="Xiaomi Mi 11 Lite">
+            <h3>Mi 11 Lite</h3>
+            <p class="old-price">BOB 1900.00</p>
+            <p class="price">BOB 1800.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Xiaomi Mi 11 Lite', 1800)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Xiaomi Poco X3 Pro -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 160</span>
+            <img src="xiaomi-poco-x3-pro.png" alt="Xiaomi Poco X3 Pro">
+            <h3>Poco X3 Pro</h3>
+            <p class="old-price">BOB 2200.00</p>
+            <p class="price">BOB 2040.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Xiaomi Poco X3 Pro', 2040)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Xiaomi Mi Band 6 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 45</span>
+            <img src="xiaomi-mi-band-6.png" alt="Xiaomi Mi Band 6">
+            <h3>Mi Band 6</h3>
+            <p class="old-price">BOB 450.00</p>
+            <p class="price">BOB 405.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Xiaomi Mi Band 6', 405)">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+
+</div>
+</section>
+
+<!-- Carrito de compras -->
+<div class="cart">
+    <h2>Carrito de compras</h2>
+    <ul id="carrito-lista">
+        <!-- Los productos seleccionados se agregarán aquí -->
+    </ul>
+    <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+</div>
+
+<script>
+    // JavaScript para manejar el carrito de compras
+    let carrito = [];
+    let total = 0;
+
+    function agregarAlCarrito(producto, precio) {
+        carrito.push({ producto, precio });
+        total += precio;
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const carritoLista = document.getElementById("carrito-lista");
+        const carritoTotal = document.getElementById("carrito-total");
+
+        // Limpiar la lista del carrito
+        carritoLista.innerHTML = "";
+
+        // Agregar elementos al carrito
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+            carritoLista.appendChild(li);
+        });
+
+        // Actualizar el total
+        carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
+
+
+
+   <!-- Sección Tecno -->
+<section id="tecno">
+    <h2>Repuestos Tecno</h2>
+    <div class="product-list">
+        <!-- Producto: Tecno POVA -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 60</span>
+            <img src="tecno-pova.png" alt="Tecno POVA">
+            <h3>Tecno POVA</h3>
+            <p class="old-price">BOB 1100.00</p>
+            <p class="price">BOB 1040.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Tecno POVA', 1040)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Tecno Camon 18P -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 90</span>
+            <img src="tecno-camon-18p.png" alt="Tecno Camon 18P">
+            <h3>Camon 18P</h3>
+            <p class="old-price">BOB 1400.00</p>
+            <p class="price">BOB 1310.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Tecno Camon 18P', 1310)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Tecno Spark 7 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 50</span>
+            <img src="tecno-spark-7.png" alt="Tecno Spark 7">
+            <h3>Spark 7</h3>
+            <p class="old-price">BOB 900.00</p>
+            <p class="price">BOB 850.00</p>
+            <div class="availability">Últimas unidades</div>
+            <button onclick="agregarAlCarrito('Tecno Spark 7', 850)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Tecno Phantom X -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 120</span>
+            <img src="tecno-phantom-x.png" alt="Tecno Phantom X">
+            <h3>Phantom X</h3>
+            <p class="old-price">BOB 2000.00</p>
+            <p class="price">BOB 1880.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Tecno Phantom X', 1880)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Tecno Pop 5 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 30</span>
+            <img src="tecno-pop-5.png" alt="Tecno Pop 5">
+            <h3>Pop 5</h3>
+            <p class="old-price">BOB 700.00</p>
+            <p class="price">BOB 670.00</p>
+            <div class="availability">Agotado</div>
+            <button disabled onclick="agregarAlCarrito('Tecno Pop 5', 670)">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+
+</div>
+</section>
+
+<!-- Carrito de compras -->
+<div class="cart">
+    <h2>Carrito de compras</h2>
+    <ul id="carrito-lista">
+        <!-- Los productos seleccionados se agregarán aquí -->
+    </ul>
+    <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+</div>
+
+<script>
+    // JavaScript para manejar el carrito de compras
+    let carrito = [];
+    let total = 0;
+
+    function agregarAlCarrito(producto, precio) {
+        carrito.push({ producto, precio });
+        total += precio;
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const carritoLista = document.getElementById("carrito-lista");
+        const carritoTotal = document.getElementById("carrito-total");
+
+        // Limpiar la lista del carrito
+        carritoLista.innerHTML = "";
+
+        // Agregar elementos al carrito
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+            carritoLista.appendChild(li);
+        });
+
+        // Actualizar el total
+        carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
+
+
+
+    <!-- Sección Realme -->
+<section id="realme">
+    <h2>Repuestos Realme</h2>
+    <div class="product-list">
+        <!-- Producto: Realme C11 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 45</span>
+            <img src="realme-c11.png" alt="Realme C11">
+            <h3>Realme C11</h3>
+            <p class="old-price">BOB 750.00</p>
+            <p class="price">BOB 705.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Realme C11', 705)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Realme C21y -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 50</span>
+            <img src="realme-c21y.png" alt="Realme C21y">
+            <h3>Realme C21y</h3>
+            <p class="old-price">BOB 800.00</p>
+            <p class="price">BOB 750.00</p>
+            <div class="availability">Últimas unidades</div>
+            <button onclick="agregarAlCarrito('Realme C21y', 750)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Realme 8 Pro -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 120</span>
+            <img src="realme-8-pro.png" alt="Realme 8 Pro">
+            <h3>Realme 8 Pro</h3>
+            <p class="old-price">BOB 2000.00</p>
+            <p class="price">BOB 1880.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Realme 8 Pro', 1880)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Realme Narzo 30 -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 70</span>
+            <img src="realme-narzo-30.png" alt="Realme Narzo 30">
+            <h3>Realme Narzo 30</h3>
+            <p class="old-price">BOB 1100.00</p>
+            <p class="price">BOB 1030.00</p>
+            <div class="availability">Agotado</div>
+            <button disabled onclick="agregarAlCarrito('Realme Narzo 30', 1030)">Agregar al carrito</button>
+        </div>
+        <!-- Producto: Realme GT -->
+        <div class="product-item">
+            <span class="save">Ahorra BOB 150</span>
+            <img src="realme-gt.png" alt="Realme GT">
+            <h3>Realme GT</h3>
+            <p class="old-price">BOB 2500.00</p>
+            <p class="price">BOB 2350.00</p>
+            <div class="availability">Disponible</div>
+            <button onclick="agregarAlCarrito('Realme GT', 2350)">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+        
+        <!-- Carrito de compras -->
+        <div class="cart">
+            <h2>Carrito de compras</h2>
+            <ul id="carrito-lista">
+                <!-- Los productos seleccionados se agregarán aquí -->
+            </ul>
+            <p>Total: <span id="carrito-total">BOB 0.00</span></p>
+        </div>
+        
+        <script>
+            // JavaScript para manejar el carrito de compras
+            let carrito = [];
+            let total = 0;
+        
+            function agregarAlCarrito(producto, precio) {
+                carrito.push({ producto, precio });
+                total += precio;
+                actualizarCarrito();
+            }
+        
+            function actualizarCarrito() {
+                const carritoLista = document.getElementById("carrito-lista");
+                const carritoTotal = document.getElementById("carrito-total");
+        
+                // Limpiar la lista del carrito
+                carritoLista.innerHTML = "";
+        
+                // Agregar elementos al carrito
+                carrito.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = `${item.producto} - BOB ${item.precio.toFixed(2)}`;
+                    carritoLista.appendChild(li);
+                });
+        
+                // Actualizar el total
+                carritoTotal.textContent = `BOB ${total.toFixed(2)}`;
+            }
+        </script>
+        </body>
+        </html>
+        
+
+
+            </div>
+            <!DOCTYPE html>
+            <html lang="es">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Comentarios de Clientes</title>
+            <style>
+              .comments-section {
+                background-color: #f0f0f0;
+                padding: 20px;
+                text-align: center;
+              }
+              .comments-section h2 {
+                margin-bottom: 20px;
+              }
+              .comment {
+                background-color: #ffffff;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                position: relative;
+                display: inline-block;
+              }
+              .comment:before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 20px solid #ffffff;
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+              .comment-rating {
+                color: #FFD700;
+                font-size: 1.5em;
+              }
+              .comment-photo {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 3px solid white;
+                position: absolute;
+                bottom: -25px;
+                left: calc(50% - 25px);
+              }
+              .comment-author {
+                font-weight: bold;
+                margin-top: 10px;
+              }
+            </style>
+            </head>
+            <body>
+            
+            <section class="comments-section">
+              <h2>Comentarios de Nuestros Clientes</h2>
+            
+              <div class="comment">
+                <div class="comment-rating">★★★★★</div>
+                <p>"El mejor servicio que he recibido. ¡Atención de primera!"</p>
+                <img class="comment-photo" src="lolo.png" alt="Foto del cliente Roberto Álvarez">
+                <div class="comment-author">Roberto Álvarez</div>
+              </div>
+              
+            
+              <div class="comment">
+                <div class="comment-rating">★★★★☆</div>
+                <p>"Muy buenos resultados, aunque el tiempo de espera fue un poco largo."</p>
+                <img class="comment-photo" src="comentario  (5).png" alt="Foto de cliente 2">
+                <div class="comment-author">Carmen Ortiz</div>
+              </div>
+            
+              <div class="comment">
+                <div class="comment-rating">★★★★★</div>
+                <p>"Increíble calidad en el producto final. ¡Totalmente recomendado!"</p>
+                <img class="comment-photo" src="comentario  (4).png" alt="Foto de cliente 3">
+                <div class="comment-author">Luisa Fernández</div>
+              </div>
+            
+              <div class="comment">
+                <div class="comment-rating">★★★☆☆</div>
+                <p>"Buen servicio, pero podría mejorar en comunicación con el cliente."</p>
+                <img class="comment-photo" src="comentario  (3).png" alt="Foto de cliente 4">
+                <div class="comment-author">Jorge Martín</div>
+              </div>
+              <div class="comment">
+                <div class="comment-rating">★★★★★</div>
+                <p>"Experiencia excepcional, atención personalizada y resultados perfectos."</p>
+                <img class="comment-photo" src="comentario  (2).png" alt="Foto de cliente 5">
+                <div class="comment-author">Ana Gómez</div>
+              </div>
+              
+              <!DOCTYPE html>
+              <html lang="es">
+              <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Contacto</title>
+              <style>
+                #contact-form {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                }
+              
+                #contact-form input, #contact-form textarea {
+                  padding: 10px;
+                  margin-bottom: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                }
+              
+                #contact-form button {
+                  padding: 10px 20px;
+                  background-color: green;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                }
+              
+                #notification {
+                  display: none;
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: green;
+                  color: white;
+                  padding: 10px;
+                  border-radius: 5px;
+                  z-index: 1001;
+                  transition: all 0.5s;
+                }
+              
+                @keyframes wink {
+                  0%, 100% { transform: scale(1); }
+                  50% { transform: scale(0.5); }
+                }
+              
+                .emoji {
+                  animation: wink 3s ease-in-out infinite;
+                }
+              </style>
+              </head>
+              <body>
+              
+              <!-- Sección de Contacto -->
+              <section id="contacto">
+                <h2>Contacto</h2>
+                <p>Si tienes preguntas o necesitas más información, no dudes en contactarnos.</p>
+                <form id="contact-form" onsubmit="event.preventDefault(); enviarMensaje();">
+                  <input type="text" id="name" name="name" placeholder="Nombre:" required>
+                  <input type="email" id="email" name="email" placeholder="Correo Electrónico:" required>
+                  <textarea id="message" name="message" placeholder="Mensaje:" required></textarea>
+                  <button type="submit">Enviar Mensaje</button>
+                </form>
+                <div id="notification">
+                  <span>Mensaje enviado </span><span class="emoji">😉</span>
+                </div>
+              </section>
+              
+              <!-- Botón de Chat Flotante -->
+              <a href="https://wa.me/message/543Z3XDHSEM3O1" id="chat-button" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background-color: blue; color: white; border: none; border-radius: 50px; cursor: pointer; text-decoration: none;">Chat</a>
+              
+              <script>
+                function enviarMensaje() {
+                  // Aquí iría el código para enviar el mensaje, como una petición AJAX o algo similar
+              
+                  // Muestra la notificación
+                  var notification = document.getElementById('notification');
+                  notification.style.display = 'block';
+              
+                  // Después de 3 segundos, oculta la notificación
+                  setTimeout(function() {
+                    notification.style.display = 'none';
+                  }, 3000);
+                }
+              </script>
+              
+              </body>
+              </html>
+              
+              
+ <!-- Botón de Chat Flotante -->
+<a href="https://wa.me/message/543Z3XDHSEM3O1" id="chat-button">Chat</a>
+
+<style>
+  /* Estilos para el formulario y el botón de chat */
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #contact-form input, #contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  #contact-form button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #25d366; /* Color WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Botón redondeado */
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de la fuente */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra para resaltar el botón */
+    z-index: 1000; /* Asegura que el botón estará sobre otros elementos */
+    text-decoration: none; /* Quita el subrayado del texto */
+    text-align: center;
+    display: inline-block;
+  }
+</style>
